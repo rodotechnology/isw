@@ -1,0 +1,113 @@
+﻿@using Ext.Net;
+@using Ext.Net.MVC;
+
+@{
+    ViewBag.Title = "Principal - .:Clínica Odontólogica:.";
+    Layout = null;
+    var X = Html.X();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingreso al sistema odontológico</title>
+    <script>
+        var loadPage = function (tabPanel, record) {
+            var tab = tabPanel.getComponent("node" + record.data.hash);
+
+            if (!tab) {
+                tab = tabPanel.add({
+                    id: "node" + record.data.hash,
+                    title: record.data.text,
+                    closable: true,
+                    loader: {
+                        url: record.data.url,
+                        renderer: "frame",
+                        loadMask: {
+                            showMask: true,
+                            msg: "Loading " + record.data.url + "..."
+                        }
+                    },
+                    autoScroll: true
+                });
+            }
+
+            tabPanel.setActiveTab(tab);
+        };
+    </script>
+</head>
+<body>
+    @(Html.X().ResourceManager())
+
+    @(X.Viewport()
+        .Layout(LayoutType.Border)
+        .Items(
+            X.Panel()
+                .Region(Region.North)
+                .Split(false)
+                .Height(60)
+                .BodyPadding(6)
+                .Html("Banner del sistema")
+                .Collapsible(false),
+
+            X.Panel()
+                .Title("Opciones")
+                .Region(Region.West)
+                .Layout(LayoutType.Accordion)
+                .Width(250)
+                .MinWidth(250)
+                .MaxWidth(400)
+                .Split(true)
+                .Collapsible(true)
+                .Items(
+                    X.Panel()
+                        .Title("Citas")
+                        .Border(false)
+                        .BodyPadding(6)
+                        .Icon(Icon.FolderGo)
+                        .Html("Opciones de citas"),
+
+                    X.Panel()
+                        .Title("Consultas")
+                        .Border(false)
+                        .BodyPadding(6)
+                        .Icon(Icon.FolderWrench)
+                        .Html("Opciones de consulta"),
+
+                    X.Panel()
+                        .Title("Pagos")
+                        .Border(false)
+                        .BodyPadding(6)
+                        .Icon(Icon.MoneyDollar)
+                        .Html("Opciones de pago"),
+
+                                        X.Panel()
+                        .Title("Salir")
+                        .Border(false)
+                        .BodyPadding(6)
+                        .Icon(Icon.DoorOut)
+                        .Html("<a href='Index'>Cerrar sesión</a>")
+                ),
+
+            X.TabPanel()
+                .Region(Region.Center)
+                .Items(
+                    X.Panel()
+                        .Title("Inicio")
+                        .Border(false)
+                        .BodyPadding(6)
+                        .Html("<h1>Area principal del aplicativo</h1>"),
+
+                    X.Panel()
+                        .Title("Close Me")
+                        .Closable(true)
+                        .Border(false)
+                        .BodyPadding(6)
+                        .Html("Closeable Tab")
+                )
+        )
+    )
+</body>
+</html>
+
+

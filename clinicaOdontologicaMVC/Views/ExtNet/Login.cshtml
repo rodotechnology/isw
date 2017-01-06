@@ -1,0 +1,154 @@
+﻿@using Ext.Net;
+@using Ext.Net.MVC;
+
+@{
+    ViewBag.Title = "Ingreso al sistema odontológico";
+    Layout = null;
+    var X = Html.X();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingreso al sistema odontológico</title>  
+</head>
+<body style="background-image: url('../../Img/Clinica1.jpg'); background-repeat: no-repeat;">
+    @(Html.X().ResourceManager())
+    <header>        
+        <script>
+        // Invalidate the login fields with the given reason.
+        var invalidateLogin = function(reason) {
+            App.txtUsername.setValidation(reason);
+            App.txtPassword.setValidation(reason);
+            App.txtUsername.validate();
+            App.txtPassword.validate();
+
+            Ext.MessageBox.show({
+                title: 'Error de autenticación',
+                msg: reason,
+                buttons: Ext.MessageBox.OK,
+                animateTarget: 'Window1',
+                icon: 'Error'
+            });
+        };
+
+        var handleLogin = function () {
+            var form = App.Window1.el.dom;
+
+            App.Window1.close();
+
+            // Restore form submit destinations
+            if (Ext.isIE) {
+                form.action = orgFormAction;
+                form.target = orgFormTarget;
+            }
+
+            // Now this would work for Chrome, and we already triggered autoComplete for IE.
+            // Chrome's is only triggered after the destination page is loaded.
+            form.submit();
+        };
+
+        var orgFormAction, orgFormTarget,
+            btn = null, iframe = null;
+
+        // If we are on IE, we will create a button and click it (at once),
+        // so autoComplete is triggered.
+        var handleClientClick = function () {
+            var form = App.Window1.el.dom;
+
+            if (Ext.isIE) {
+                if (iframe == null) {
+                    iframe = document.createElement("IFRAME");
+                    iframe.name = "ie_login_flush";
+                    form.appendChild(iframe);
+                }
+
+                if (btn == null) {
+                    btn = document.createElement("BUTTON");
+                    btn.type = "submit";
+                    btn.id = "submitButton";
+                    btn.style = "display: none";
+                    orgFormAction = form.action;
+                    form.action = "about:blank";
+                    orgFormTarget = form.target;
+                    form.target = "ie_login_flush";
+                    form.appendChild(btn);
+                }
+
+                // At this time, AutoComplete for IE is triggered.
+                btn.click();
+            }
+        }
+        </script>
+    </header>
+    
+    @(
+        X.Window()
+            .ID("Window1")
+            .Closable(false)
+            .Resizable(false)
+            .Height(200)
+            .Icon(Icon.Lock)
+            .Title("Ingrese sus credenciales")
+            .Draggable(true)
+            .Width(350)
+            .Modal(true)
+            .BodyPadding(5)
+            .Layout(LayoutType.Form)
+            .AutoEl(el =>
+            {
+                el.Tag = HtmlTextWriterTag.Form;
+                el.CustomConfig.Add(new ConfigItem()
+                {
+                    Name = "method",
+                    Value = "POST",
+                    Mode = ParameterMode.Value
+                });
+                el.CustomConfig.Add(new ConfigItem()
+                {
+                    Name = "action",
+                    Value = "Main",
+                    Mode = ParameterMode.Value
+                });
+            })
+            .Items(
+                X.TextField()
+                    .ID("txtUsername")
+                    .Name("username")
+                    .FieldLabel("Usuario")
+                    .AllowBlank(false)
+                    .BlankText("Se requiere un nombre de usuario")
+                    .Text("Demo"),
+                X.TextField()
+                    .ID("txtPassword")
+                    .Name("password")
+                    .InputType(Ext.Net.InputType.Password)
+                    .FieldLabel("Password")
+                    .AllowBlank(false)
+                    .BlankText("Se requiere un password")
+                    .Text("demo")
+            )
+            .Buttons(
+                X.Button()
+                    .Text("Ingresar")
+                    .Icon(Icon.Accept)
+                    .FormBind(true)
+                    .Handler("handleClientClick")
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("Button1_Click");
+                        de.Click.Success = "handleLogin";
+                        de.Click.Failure = "invalidateLogin(result.errorMessage);";
+                        de.Click.ShowWarningOnFailure = false;
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.EventMask.Msg = "Verifying...";
+                        de.Click.EventMask.MinDelay = 1000;
+
+                        de.Click.ExtraParams.Add(new Parameter("user", "App.txtUsername.value", ParameterMode.Raw));
+                        de.Click.ExtraParams.Add(new Parameter("pass", "App.txtPassword.value", ParameterMode.Raw));
+                    })
+            )
+    )
+
+</body>
+</html>
+

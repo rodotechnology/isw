@@ -1,0 +1,216 @@
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\ApplicationInsights.config
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\csc.exe
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\System.Collections.Immutable.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\vbc.exe
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\VBCSCompiler.exe
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\VBCSCompiler.exe.config
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\clinicaOdontologicaMVC.dll.config
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\clinicaOdontologicaMVC.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\clinicaOdontologicaMVC.pdb
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Antlr3.Runtime.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.SqlServer.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.Web.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.WindowsServer.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.ApplicationInsights.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Google.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Web.Infrastructure.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Newtonsoft.Json.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Owin.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Helpers.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Mvc.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Optimization.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Razor.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Deployment.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Razor.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\WebGrease.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.Web.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.WindowsServer.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.ApplicationInsights.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Helpers.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Mvc.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Optimization.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Razor.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Deployment.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Razor.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Antlr3.Runtime.pdb
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Newtonsoft.Json.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.SqlServer.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Google.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Helpers.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Mvc.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Optimization.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Razor.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.WebPages.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.WebPages.Razor.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\EntityFramework.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\EntityFramework.SqlServer.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.Google.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\obj\Debug\clinicaOdontologicaMVC.csprojResolveAssemblyReference.cache
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\obj\Debug\clinicaOdontologicaMVC.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\obj\Debug\clinicaOdontologicaMVC.pdb
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.Utilities.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Transformer.NET.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\WebActivatorEx.dll
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.Utilities.xml
+c:\users\rortiz\documents\visual studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Transformer.NET.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\ApplicationInsights.config
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\csc.exe
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\vbc.exe
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\VBCSCompiler.exe
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\clinicaOdontologicaMVC.dll.config
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\clinicaOdontologicaMVC.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\clinicaOdontologicaMVC.pdb
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Antlr3.Runtime.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.Utilities.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.Web.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Newtonsoft.Json.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Owin.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Helpers.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Mvc.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Optimization.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Razor.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Transformer.NET.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\WebActivatorEx.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\WebGrease.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Ext.Net.Utilities.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.Web.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Newtonsoft.Json.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Helpers.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Mvc.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Optimization.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.Razor.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Transformer.NET.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Antlr3.Runtime.pdb
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\EntityFramework.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\obj\Debug\clinicaOdontologicaMVC.csprojResolveAssemblyReference.cache
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\obj\Debug\clinicaOdontologicaMVC.dll
+C:\Users\Rodo Callejas\Documents\Visual Studio 2015\Projects\clinicaOdontologicaMVC\clinicaOdontologicaMVC\obj\Debug\clinicaOdontologicaMVC.pdb

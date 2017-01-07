@@ -1,6 +1,8 @@
 ﻿
 @{
+    ViewBag.Title = "Consulta - .:Clínica Odontólogica:.";
     Layout = null;
+    var X = Html.X();
 }
 
 <!DOCTYPE html>
@@ -9,10 +11,266 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Consulta - .:Clínica Odontólogica:.</title>
+    <script>
+        var updateRecord = function (form) {
+            if (form.getForm()._record == null) {
+                return;
+            }
+
+            if (!form.getForm().isValid()) {
+                Ext.net.Notification.show({
+                    iconCls: "icon-exclamation",
+                    html: "Form is invalid",
+                    title: "Error"
+                });
+                return false;
+            }
+
+            form.getForm().updateRecord();
+        };
+
+        var addRecord = function (form, grid) {
+            if (!form.getForm().isValid()) {
+                Ext.net.Notification.show({
+                    iconCls: "icon-exclamation",
+                    html: "Form is invalid",
+                    title: "Error"
+                });
+
+                return false;
+            }
+
+            grid.store.insert(0, new Person(form.getForm().getValues()));
+            form.getForm().reset();
+        };
+
+        var onStoreException = function (proxy, response, operation) {
+            var error = operation.getError(),
+                        message = Ext.isString(error) ? error : ('(' + error.status + ')' + error.statusText);
+
+            Ext.net.Notification.show({
+                iconCls: 'icon-exclamation',
+                html: message + "\n<br /><b>Proxy type:</b> " + proxy.type,
+                title: 'EXCEPTION',
+                autoScroll: true,
+                hideDelay: 5000,
+                width: 300,
+                height: 200
+            });
+        };
+    </script>
 </head>
 <body>
-    <div> 
-            Formulario para la consulta
-    </div>
+@(X.ResourceManager())
+@(Html.X().FormPanelForModel()
+            .ID("UserForm")
+            .Icon(Icon.User)
+            .Frame(true)
+            .Title("Paciente")
+            .DefaultAnchor("100%")
+            .DefaultButton("1")
+            .Items(X.TextField()
+                        .FieldLabel("Nombre"),
+                    X.TextField()
+                        .FieldLabel("Apellidos"),
+                    X.TextField()
+                        .FieldLabel("Diagnostico")
+                        )
+            .Buttons(
+                Html.X().Button()
+                    .Text("Guardar")
+                    .Icon(Icon.Disk)
+                    .Handler("updateRecord(this.up('form'));"),
+
+                Html.X().Button()
+                    .Text("Crear")
+                    .Icon(Icon.UserAdd)
+                    .Handler("addRecord(this.up('form'), App.GridPanel1); this.up('form').defaultButton='1';"),
+
+                Html.X().Button()
+                    .Text("Limpiar")
+                    .Handler("this.up('form').getForm().reset(); this.up('form').defaultButton='1';")
+            )
+)
+
+@(Html.X().GridPanel()
+            .ID("GridPanel1")
+            .Store(
+                Html.X().StoreForModel()
+                    .AutoSync(true)
+                    .ShowWarningOnFailure(false)
+                    .Listeners(l =>
+                    {
+                        l.Exception.Fn = "onStoreException";
+                        l.Exception.Buffer = 10;
+                    })
+                    .SyncUrl(Url.Action("HandleChanges"))
+            )
+            .Icon(Icon.Table)
+            .Frame(true)
+            .Title("Historial")
+            .Height(400)
+            .StyleSpec("margin-top: 10px;")
+            .ColumnModel(
+     Html.X().Column().Text("Id").DataIndex("Id"),
+     Html.X().Column().Text("Diagnostico").DataIndex("Diagnostico").Flex(1),
+     Html.X().Column().Text("Receta").DataIndex("Receta"),
+     Html.X().Column().Text("Fecha").DataIndex("Fecha"),
+
+               Html.X().CommandColumn()
+                   .Width(70)
+                   .Commands(
+                        Html.X().GridCommand()
+                            .Text("Reject")
+                            .ToolTip(t =>
+                            {
+                                t.Text = "Reject row changes";
+                            })
+                            .CommandName("reject")
+                            .Icon(Icon.ArrowUndo)
+                   )
+                   .PrepareToolbar(t =>
+                   {
+                       t.Handler = "toolbar.items.get(0).setVisible(record.dirty);";
+                   })
+                   .Listeners(l =>
+                   {
+                       l.Command.Handler = "record.reject();";
+                   })
+            )
+            .TopBar(
+                Html.X().Toolbar()
+                    .Items(
+                        Html.X().Button()
+                            .Text("Registro")
+                            .Icon(Icon.Add)
+                            .Handler("this.up('grid').store.insert(0, new Person());"),
+
+                        Html.X().Button()
+                            .Text("Borrar registro")
+                            .Icon(Icon.Exclamation)
+                            .Handler("this.up('grid').deleteSelected(); App.UserForm.getForm().reset();")
+
+
+
+
+                    )
+            )
+            .SelectionModel(
+                Html.X().RowSelectionModel()
+                    .Mode(SelectionMode.Single)
+                    .Listeners(l =>
+                    {
+                        l.Select.Handler = "App.UserForm.getForm().loadRecord(record); App.UserForm.defaultButton='0';";
+                    })
+            )
+            .Buttons(
+                Html.X().Button()
+                    .Text("Nueva cita")
+                    .Icon(Icon.Add)
+                    .Handler("Ext.getCmp('winRegistroCita').show();")
+            )
+
+)
+
+@(X.Window()
+        .ID("winRegistroCita")
+        .Title("Nueva Cita")
+        .Icon(Icon.Add)
+        .Width(600)
+        .Height(500)
+        .Collapsible(true)
+        .Maximizable(false)
+        .BodyStyle("background-color: #fff;")
+        .BodyPadding(5)
+        .Hidden(true)
+        .Modal(true)
+        .Items(X.FormPanel()
+        .DefaultAnchor("100%")
+                .BodyPadding(5)
+                .Items(
+            X.FieldContainer()
+            .Layout(LayoutType.HBox)
+            .Items(
+                X.DateField()
+                    .Name("finicio")
+                    .FieldLabel("Inicio"),
+                X.TimeField()
+                    .Name("Hinicio")
+                    .FieldLabel("HInicio")
+                    .TriggerIcon(TriggerIcon.SimpleTime)
+                ),
+                X.FieldContainer()
+            .Layout(LayoutType.HBox)
+            .Items(
+                X.DateField()
+                    .Name("ffin")
+                    .FieldLabel("Fin"),
+                X.TimeField()
+                    .Name("HFin")
+                    .FieldLabel("HFin")
+                    .TriggerIcon(TriggerIcon.SimpleTime)
+                ),
+                   X.ComboBox()
+        .ID("cbxServicio")
+       .FieldLabel("Servicio")
+        .Editable(false)
+        .QueryMode(DataLoadMode.Local)
+        .TriggerAction(TriggerAction.All)
+        .Flex(1)
+        .EmptyText("Seleccione un servicio")
+        .Items(
+            new ListItem("Belgium", "BE"),
+            new ListItem("Brazil", "BR"),
+            new ListItem("Bulgaria", "BG"),
+            new ListItem("Canada", "CA"),
+            new ListItem("Chile", "CL"),
+            new ListItem("Cyprus", "CY"),
+            new ListItem("Finland", "FI"),
+            new ListItem("France", "FR")
+        ), X.ComboBox()
+        .ID("cbxMedico")
+        .FieldLabel("Medico")
+        .Editable(false)
+        .QueryMode(DataLoadMode.Local)
+        .TriggerAction(TriggerAction.All)
+        .Flex(1)
+        .EmptyText("Seleccione un medico")
+        .Items(
+            new ListItem("Belgium", "BE"),
+            new ListItem("Brazil", "BR"),
+            new ListItem("Bulgaria", "BG"),
+            new ListItem("Canada", "CA"),
+            new ListItem("Chile", "CL"),
+            new ListItem("Cyprus", "CY"),
+            new ListItem("Finland", "FI"),
+            new ListItem("France", "FR")
+        ),
+                   X.TextField()
+                        .FieldLabel("Nombre"),
+                    X.TextField()
+                        .FieldLabel("Apellidos"),
+
+                X.FieldContainer()
+            .Layout(LayoutType.VBox)
+            .Items(
+                        X.TextField()
+                        .FieldLabel("Telefono"),
+                    X.TextField()
+                        .FieldLabel("Celular")
+                )
+
+            )
+
+                .Buttons(
+                    X.Button()
+                    .Icon(Icon.Disk)
+                    .Text("Generar"),
+                    X.Button()
+                    .Icon(Icon.Cancel)
+                        .Text("Cancelar")
+                ))
+
+)
 </body>
 </html>

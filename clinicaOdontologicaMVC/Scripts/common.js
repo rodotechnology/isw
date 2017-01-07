@@ -54,10 +54,11 @@
     },
 
     dayClick: function (cal, dt, allDay, el) {
-        this.record.show.call(this, cal, {
-            StartDate: dt,
-            IsAllDay: allDay
-        }, el);
+        //this.record.show.call(this, cal, {
+        //    StartDate: dt,
+        //    IsAllDay: allDay
+        //}, el);
+        Ext.getCmp('winRegistroCita').show();
     },
 
     record: {
@@ -111,7 +112,8 @@
         },
 
         show: function (cal, rec, el) {
-            CompanyX.getWindow().show(rec, el);
+            //CompanyX.getWindow().show(rec, el);
+            Ext.getCmp('winEditCita').show();
         },
 
         saveAll: function () {

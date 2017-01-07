@@ -2,20 +2,17 @@
 @using Ext.Net.MVC;
 @model EventModelCollection
 
-
 @{
     ViewBag.Title = "Agenda - .:Clínica Odontólogica:.";
     Layout = null;
     var X = Html.X();
 }
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Agenda de citas</title>
     <link rel="stylesheet" href="@Url.Content("~/Content/calendar.css")" />
     <script src="@Url.Content("~/Scripts/common.js")"></script>
-
     <style>
         .ext-color-4,
         .ext-ie .ext-color-4-ad,
@@ -45,22 +42,13 @@
     @(Html.X().Viewport()
         .Layout("border")
         .Items(
-            /*Html.X().Panel()
+            Html.X().Panel()
                 .Height(50)
                 .Border(false)
                 .Region(Region.North)
                 .Cls("app-header")
-                .BodyCls("app-header-content")
-                .Content(
-                @<text>
-                    <div id="app-logo">
-                        <div class="logo-top">&nbsp;</div>
-                        <div id="logo-body">&nbsp;</div>
-                        <div class="logo-bottom">&nbsp;</div>
-                    </div>
-                    <h1>My Calendar</h1>
-                    <span id="app-msg" class="x-hidden"></span>
-                </text>),*/
+                .BodyCls("app-header-content"),
+
             Html.X().Panel()
                 .ID("Panel1")
                 .Title("Agenda de citas")
@@ -68,7 +56,7 @@
                 .Region(Region.Center)
                 .Cls("app-center")
                 .Items(
-                    Html.X().Panel()
+                   Html.X().Panel()
                         .Width(300)
                         .Region(Region.West)
                         .Border(false)
@@ -83,11 +71,11 @@
                                     events.Select.Scope = "CompanyX";
                                 })
                         )
-                        .TopBar(Html.X().Toolbar()
-                            .Items(Html.X().Button()
-                                .Text("Guardar todos los eventos")
-                                .Icon(Icon.Disk)
-                                .Handler("CompanyX.record.saveAll")
+                        .TopBar(X.Toolbar()
+                           .Items(X.Button()
+                                .Text("Registrar Cita")
+                                .Icon(Icon.Add)
+                                .Handler("Ext.getCmp('winRegistroCita').show();")
                             )
                         ),
                     Html.X().CalendarPanel()
@@ -95,6 +83,9 @@
                         .Region(Region.Center)
                         .ActiveIndex(2)
                         .Border(false)
+                        .DayText("Dia")
+                        .WeekText("Semana")
+                        .MonthText("Mes")
                         .EventStore(Html.X().EventStore()
                             .ID("EventStore1")
                             .Listeners(events =>
@@ -135,18 +126,18 @@
                             events.EventClick.Scope = "CompanyX";
                             events.DayClick.Fn = "CompanyX.dayClick";
                             events.DayClick.Scope = "CompanyX";
-                            events.RangeSelect.Fn = "CompanyX.rangeSelect";
-                            events.RangeSelect.Scope = "CompanyX";
-                            events.EventMove.Fn = "CompanyX.record.move";
-                            events.EventMove.Scope = "CompanyX";
-                            events.EventResize.Fn = "CompanyX.record.resize";
-                            events.EventResize.Scope = "CompanyX";
-                            events.EventAdd.Fn = "CompanyX.record.addFromEventDetailsForm";
-                            events.EventAdd.Scope = "CompanyX";
-                            events.EventUpdate.Fn = "CompanyX.record.updateFromEventDetailsForm";
-                            events.EventUpdate.Scope = "CompanyX";
-                            events.EventDelete.Fn = "CompanyX.record.removeFromEventDetailsForm";
-                            events.EventDelete.Scope = "CompanyX";
+                            //events.RangeSelect.Fn = "CompanyX.rangeSelect";
+                            //events.RangeSelect.Scope = "CompanyX";
+                            //events.EventMove.Fn = "CompanyX.record.move";
+                            //events.EventMove.Scope = "CompanyX";
+                            //events.EventResize.Fn = "CompanyX.record.resize";
+                            //events.EventResize.Scope = "CompanyX";
+                            //events.EventAdd.Fn = "CompanyX.record.addFromEventDetailsForm";
+                            //events.EventAdd.Scope = "CompanyX";
+                            //events.EventUpdate.Fn = "CompanyX.record.updateFromEventDetailsForm";
+                            //events.EventUpdate.Scope = "CompanyX";
+                            //events.EventDelete.Fn = "CompanyX.record.removeFromEventDetailsForm";
+                            //events.EventDelete.Scope = "CompanyX";
                         })
                 )
         )
@@ -158,17 +149,219 @@
         .CalendarStoreID("CalendarStore1")
         .Listeners(events =>
         {
-            events.EventAdd.Fn = "CompanyX.record.add";
-            events.EventAdd.Scope = "CompanyX";
-            events.EventUpdate.Fn = "CompanyX.record.update";
-            events.EventUpdate.Scope = "CompanyX";
-            events.EditDetails.Fn = "CompanyX.record.edit";
-            events.EditDetails.Scope = "CompanyX";
-            events.EventDelete.Fn = "CompanyX.record.remove";
-            events.EventDelete.Scope = "CompanyX";
+            //events.EventAdd.Fn = "CompanyX.record.add";
+            //events.EventAdd.Scope = "CompanyX";
+            //events.EventUpdate.Fn = "CompanyX.record.update";
+            //events.EventUpdate.Scope = "CompanyX";
+            //events.EditDetails.Fn = "CompanyX.record.edit";
+            //events.EditDetails.Scope = "CompanyX";
+            //events.EventDelete.Fn = "CompanyX.record.remove";
+            //events.EventDelete.Scope = "CompanyX";
         })
+    )
+
+    @(X.Window()
+        .ID("winRegistroCita")
+        .Title("Nueva Cita")
+        .Icon(Icon.Add)
+        .Width(600)
+        .Height(500)
+        .Collapsible(true)
+        .Maximizable(false)
+        .BodyStyle("background-color: #fff;")
+        .BodyPadding(5)
+        .Hidden(true)
+        .Modal(true)
+        .Items(X.FormPanel()
+        .DefaultAnchor("100%")
+                .BodyPadding(5)
+                .Items(
+            X.FieldContainer()
+            .Layout(LayoutType.HBox)
+            .Items(
+                X.DateField()
+                    .Name("finicio")
+                    .FieldLabel("Inicio"),
+                X.TimeField()
+                    .Name("Hinicio")
+                    .FieldLabel("HInicio")
+                    .TriggerIcon(TriggerIcon.SimpleTime)
+                ),
+                X.FieldContainer()
+            .Layout(LayoutType.HBox)
+            .Items(
+                X.DateField()
+                    .Name("ffin")
+                    .FieldLabel("Fin"),
+                X.TimeField()
+                    .Name("HFin")
+                    .FieldLabel("HFin")
+                    .TriggerIcon(TriggerIcon.SimpleTime)
+                ),
+                   X.ComboBox()
+        .ID("cbxServicio")
+       .FieldLabel("Servicio")
+        .Editable(false)
+        .QueryMode(DataLoadMode.Local)
+        .TriggerAction(TriggerAction.All)
+        .Flex(1)
+        .EmptyText("Seleccione un servicio")
+        .Items(
+            new ListItem("Belgium", "BE"),
+            new ListItem("Brazil", "BR"),
+            new ListItem("Bulgaria", "BG"),
+            new ListItem("Canada", "CA"),
+            new ListItem("Chile", "CL"),
+            new ListItem("Cyprus", "CY"),
+            new ListItem("Finland", "FI"),
+            new ListItem("France", "FR")
+        ), X.ComboBox()
+        .ID("cbxMedico")
+        .FieldLabel("Medico")
+        .Editable(false)
+        .QueryMode(DataLoadMode.Local)
+        .TriggerAction(TriggerAction.All)
+        .Flex(1)
+        .EmptyText("Seleccione un medico")
+        .Items(
+            new ListItem("Belgium", "BE"),
+            new ListItem("Brazil", "BR"),
+            new ListItem("Bulgaria", "BG"),
+            new ListItem("Canada", "CA"),
+            new ListItem("Chile", "CL"),
+            new ListItem("Cyprus", "CY"),
+            new ListItem("Finland", "FI"),
+            new ListItem("France", "FR")
+        ),
+                   X.TextField()
+                        .FieldLabel("Nombre"),
+                    X.TextField()
+                        .FieldLabel("Apellidos"),
+
+                X.FieldContainer()
+            .Layout(LayoutType.VBox)
+            .Items(
+                        X.TextField()
+                        .FieldLabel("Telefono"),
+                    X.TextField()
+                        .FieldLabel("Celular"),
+                    X.TextField()
+                        .FieldLabel("Correo electrónico")
+                )
+
+            )
+
+                .Buttons(
+                    X.Button()
+                    .Icon(Icon.Disk)
+                    .Text("Generar"),
+                    X.Button()
+                    .Icon(Icon.Cancel)
+                        .Text("Cancelar")
+                ))
+
+    )
+
+    @(X.Window()
+        .ID("winEditCita")
+        .Title("Editar Cita")
+        .Icon(Icon.PageEdit)
+        .Width(600)
+        .Height(500)
+        .Collapsible(true)
+        .Maximizable(false)
+        .BodyStyle("background-color: #fff;")
+        .BodyPadding(5)
+        .Hidden(true)
+        .Modal(true)
+        .Items(X.FormPanel()
+        .DefaultAnchor("100%")
+                .BodyPadding(5)
+                .Items(
+            X.FieldContainer()
+            .Layout(LayoutType.HBox)
+            .Items(
+                X.DateField()
+                    .Name("finicioE")
+                    .FieldLabel("Inicio"),
+               X.TimeField()
+                    .Name("HinicioE")
+                    .FieldLabel("HInicio")
+                    .TriggerIcon(TriggerIcon.SimpleTime)
+                ),
+                X.FieldContainer()
+            .Layout(LayoutType.HBox)
+            .Items(
+                X.DateField()
+                    .Name("ffinE")
+                    .FieldLabel("Fin"),
+                X.TimeField()
+                    .Name("HFinE")
+                    .FieldLabel("HFin")
+                    .TriggerIcon(TriggerIcon.SimpleTime)
+                ),
+                   X.ComboBox()
+        .ID("cbxServicioE")
+        .FieldLabel("Servicio")
+        .Editable(false)
+        .QueryMode(DataLoadMode.Local)
+        .TriggerAction(TriggerAction.All)
+        .Flex(1)
+        .EmptyText("Seleccione un servicio")
+        .Items(
+            new ListItem("Belgium", "BE"),
+            new ListItem("Brazil", "BR"),
+            new ListItem("Bulgaria", "BG"),
+            new ListItem("Canada", "CA"),
+            new ListItem("Chile", "CL"),
+            new ListItem("Cyprus", "CY"),
+            new ListItem("Finland", "FI"),
+            new ListItem("France", "FR")
+        ), X.ComboBox()
+        .ID("cbxMedicoE")
+        .FieldLabel("Medico")
+        .Editable(false)
+        .QueryMode(DataLoadMode.Local)
+        .TriggerAction(TriggerAction.All)
+        .Flex(1)
+        .EmptyText("Seleccione un medico")
+        .Items(
+            new ListItem("Belgium", "BE"),
+            new ListItem("Brazil", "BR"),
+            new ListItem("Bulgaria", "BG"),
+            new ListItem("Canada", "CA"),
+            new ListItem("Chile", "CL"),
+            new ListItem("Cyprus", "CY"),
+            new ListItem("Finland", "FI"),
+            new ListItem("France", "FR")
+        ),
+                   X.TextField()
+                        .FieldLabel("Nombre"),
+                    X.TextField()
+                        .FieldLabel("Apellidos"),
+
+                X.FieldContainer()
+            .Layout(LayoutType.VBox)
+            .Items(
+                        X.TextField()
+                        .FieldLabel("Telefono"),
+                    X.TextField()
+                        .FieldLabel("Celular"),
+                    X.TextField()
+                        .FieldLabel("Correo electrónico")
+                )
+
+            )
+
+                .Buttons(
+                    X.Button()
+                    .Icon(Icon.DiskEdit)
+                    .Text("Generar"),
+                    X.Button()
+                    .Icon(Icon.Cancel)
+                        .Text("Cancelar")
+                ))
+
     )
 </body>
 </html>
-
-

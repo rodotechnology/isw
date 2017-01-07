@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Web;
 using System.Web.Mvc;
 using Ext.Net;
 using Ext.Net.MVC;
@@ -57,6 +57,31 @@ namespace clinicaOdontologicaMVC.Controllers
             return View();
         }
 
+        public ActionResult LoadPages(string node)
+        {
+            NodeCollection result = null;
+            if (node == "_root")
+            {
+                result = SiteMapModel.CreateNode(SiteMap.RootNode).Children;
+            }
+            else
+            {
+                SiteMapNode siteMapNode = SiteMap.Provider.FindSiteMapNodeFromKey(node);
+                SiteMapNodeCollection children = siteMapNode.ChildNodes;
+                result = new NodeCollection();
+
+                if (children != null && children.Count > 0)
+                {
+                    foreach (SiteMapNode mapNode in siteMapNode.ChildNodes)
+                    {
+                        result.Add(SiteMapModel.CreateNodeWithOutChildren(mapNode));
+                    }
+                }
+            }
+
+            return this.Store(result);
+        }
+
         public ActionResult Agenda()
         {
             return View(BasicModel.Events);
@@ -82,6 +107,11 @@ namespace clinicaOdontologicaMVC.Controllers
             X.Msg.Notify("Message", msg).Show();
 
             return this.Direct();
+        }
+
+        public ActionResult Cita()
+        {
+            return View(new CitaModel());
         }
 
     }

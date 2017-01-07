@@ -247,6 +247,8 @@
     <Content Include="Img\05.jpg" />
     <Content Include="Img\06.jpg" />
     <Content Include="Img\07.jpg" />
+    <Content Include="Img\banner-superior.jpg" />
+    <Content Include="Img\banner-top.jpg" />
     <Content Include="Img\Clinica1.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -271,7 +273,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -311,9 +315,14 @@
     <Content Include="Views\ExtNet\Login.cshtml" />
     <Content Include="Views\ExtNet\Main.cshtml" />
     <Content Include="Views\ExtNet\Agenda.cshtml" />
+    <Content Include="Views\ExtNet\Cita.cshtml" />
+    <Content Include="Views\ExtNet\Expediente.cshtml" />
+    <Content Include="Views\ExtNet\Consulta.cshtml" />
+    <Content Include="Views\ExtNet\OrdenDePago.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Main\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

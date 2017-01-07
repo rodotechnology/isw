@@ -1,5 +1,7 @@
 using System;
+using System.Web;
 using Ext.Net;
+using System.Collections.Generic;
 
 namespace clinicaOdontologicaMVC.Models
 {
@@ -130,6 +132,102 @@ namespace clinicaOdontologicaMVC.Models
                         Notes = "Don't forget the tickets!",
                         Reminder = "60"
                     }
+                };
+            }
+        }
+    }
+
+    public class SiteMapModel
+    {
+        //dynamic node creation
+        public static Node CreateNodeWithOutChildren(SiteMapNode siteMapNode)
+        {
+            Node treeNode;
+
+            if (siteMapNode.ChildNodes != null && siteMapNode.ChildNodes.Count > 0)
+            {
+                treeNode = new Node();
+            }
+            else
+            {
+                treeNode = new Node();
+                treeNode.Leaf = true;
+            }
+
+            if (!string.IsNullOrEmpty(siteMapNode.Url))
+            {
+                treeNode.Href = siteMapNode.Url.StartsWith("~/") ? siteMapNode.Url.Replace("~/", "http://examples.ext.net/") : ("http://examples.ext.net" + siteMapNode.Url);
+            }
+
+            treeNode.NodeID = siteMapNode.Key;
+            treeNode.Text = siteMapNode.Title;
+            treeNode.Qtip = siteMapNode.Description;
+
+            return treeNode;
+        }
+
+        //static node creation with children
+        public static Node CreateNode(SiteMapNode siteMapNode)
+        {
+            Node treeNode = new Node();
+
+            if (!string.IsNullOrEmpty(siteMapNode.Url))
+            {
+
+                treeNode.CustomAttributes.Add(new ConfigItem("url", siteMapNode.Url.StartsWith("~/") ? siteMapNode.Url.Replace("~/", "http://examples.ext.net/") : ("http://examples.ext.net" + siteMapNode.Url)));
+                treeNode.Href = "#";
+            }
+
+            treeNode.NodeID = siteMapNode.Key;
+            treeNode.CustomAttributes.Add(new ConfigItem("hash", siteMapNode.Key.GetHashCode().ToString()));
+            treeNode.Text = siteMapNode.Title;
+            treeNode.Qtip = siteMapNode.Description;
+
+            SiteMapNodeCollection children = siteMapNode.ChildNodes;
+
+            if (children != null && children.Count > 0)
+            {
+                foreach (SiteMapNode mapNode in siteMapNode.ChildNodes)
+                {
+                    treeNode.Children.Add(SiteMapModel.CreateNode(mapNode));
+                }
+            }
+            else
+            {
+                treeNode.Leaf = true;
+            }
+
+            return treeNode;
+        }
+    }
+
+    public class CitaModel
+    {
+        public IEnumerable<object> Patients
+        {
+            get
+            {
+                return new List<object>
+                {
+                    new { InsuranceCode="11111", Name="Juan Pérez", Address="Main Street", Telephone="555 1234 123" },
+                    new { InsuranceCode="22222", Name="José López", Address="Cromwell Street", Telephone="923 672 485" },
+                    new { InsuranceCode="33333", Name="Carmen Ramírez", Address="Over The Rainbow", Telephone="555 321 0987" },
+                    new { InsuranceCode="44444", Name="Sophia Hernández", Address="Blimp Street", Telephone="555 111 2222" },
+                    new { InsuranceCode="55555", Name="Leopoldo Campos", Address="Talbot County, Maryland", Telephone="N/A" }
+                };
+            }
+        }
+
+        public IEnumerable<object> Hospitals
+        {
+            get
+            {
+                return new List<object>
+                {
+                    new { Code="AAAAA", Name="Juan Martínez", Address="A1", Telephone="Cariología" },
+                    new { Code="BBBBB", Name="Luis Gavidia", Address="B1", Telephone="Ortodoncia" },
+                    new { Code="CCCCC", Name="Oscar Gutiérrez", Address="C1", Telephone="Periodontología" },
+                    new { Code="DDDDD", Name="Rodrigo Ortiz", Address="D1", Telephone="Odontopediatría" }
                 };
             }
         }

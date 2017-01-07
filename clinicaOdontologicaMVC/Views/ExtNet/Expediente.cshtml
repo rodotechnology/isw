@@ -1,0 +1,173 @@
+﻿@model object[]
+
+@{
+    Layout = null;
+    var X = Html.X();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Expediente - .:Clínica Odontólogica:.</title>
+    <script>
+        var template = '<span style="color:{0};">{1}</span>';
+
+        var change = function (value) {
+            return Ext.String.format(template, (value > 0) ? "green" : "red", value);
+        };
+
+        var pctChange = function (value) {
+            return Ext.String.format(template, (value > 0) ? "green" : "red", value + "%");
+        };
+    </script>
+</head>
+<body>
+    @(X.ResourceManager())
+
+    @(X.Panel()
+        .ID("Panel1")
+        .Layout(LayoutType.Fit)
+        .ActiveIndex(0)
+        .Defaults(d =>
+        {
+            d.Add(new Parameter("border", "false", ParameterMode.Raw));
+            d.Add(new Parameter("padding", "5", ParameterMode.Raw));
+        })
+        .TopBar(
+            X.Toolbar()
+                .StyleSpec("padding-bottom:0px;")
+                .Items(
+                    /*X.Button().Icon(Icon.Database),
+                    X.Button().Icon(Icon.Disk),*/
+                    X.ToolbarFill(),
+                    X.TabStrip()
+                        .Width(300)
+                        .Items(t =>
+                        {
+                            //t.Add(X.Tab().ActionItemID("pnlSummary").Text("Summary"));
+                            t.Add(X.Tab().ActionItemID("Persona").Text("Persona"));
+                            t.Add(X.Tab().ActionItemID("Salud").Text("Salud"));
+                        }),
+                    X.ToolbarSeparator(),
+                    X.Button().Icon(Icon.Disk),
+                    X.Button().Icon(Icon.Help)
+                )
+        )
+        .Items(
+            /*X.Panel()
+                .ID("pnlSummary")
+                .Html("Summary")
+                .Header(false),
+
+            X.Panel()
+                .ID("pnlData")
+                .Html("Data")
+                .Header(false),*/
+
+    X.FormPanel()
+        .ID("Persona")
+        .BodyPadding(5)
+        .Layout(LayoutType.Fit)
+        .FieldDefaults(fd =>
+        {
+            fd.LabelAlign = LabelAlign.Left;
+            fd.MsgTarget = MessageTarget.Side;
+        })
+        .Items(
+        X.FieldSet()
+            .Title("Datos generales")
+            .MarginSpec("0 0 0 10")
+            .Defaults(d =>
+            {
+                d.Add(new Parameter("LabelWidth", "115"));
+            })
+            .Items(
+                X.TextField()
+                    .Name("company")
+                    .FieldLabel("Nombre"),
+                X.TextField()
+                    .Name("price")
+                    .FieldLabel("Apellido"),
+                X.DateField()
+                    .Name("lastChange")
+                    .FieldLabel("Fecha de nacimiento")              
+            )
+        ),
+
+X.FormPanel()
+        .ID("Salud")
+        .BodyPadding(5)
+        .Layout(LayoutType.Fit)
+        .FieldDefaults(fd =>
+        {
+            fd.LabelAlign = LabelAlign.Left;
+            fd.MsgTarget = MessageTarget.Side;
+        })
+        .Items(
+        X.FieldSet()
+            .ColumnWidth(0.4)
+            .Title("Datos de salud")
+            .MarginSpec("0 0 0 10")
+            .Defaults(d =>
+            {
+                d.Add(new Parameter("LabelWidth", "115"));
+            })
+            .Items(              
+                X.RadioGroup()
+                    .FieldLabel("Alergias")
+                    .ColumnsNumber(3)
+                    .AutomaticGrouping(false)
+                    .Items(
+                        X.Checkbox().Name("rating").InputValue("0").BoxLabel("Penisilina"),
+                        X.Checkbox().Name("rating").InputValue("1").BoxLabel("Polvo"),
+                        X.Checkbox().Name("rating").InputValue("2").BoxLabel("Otro")
+                    ),
+                X.RadioGroup()
+                    .FieldLabel("Enfermedades crónicas")
+                    .ColumnsNumber(3)
+                    .AutomaticGrouping(false)
+                    .Items(
+                        X.Checkbox().Name("rating").InputValue("0").BoxLabel("Hipertensión"),
+                        X.Checkbox().Name("rating").InputValue("1").BoxLabel("Diabetes")
+                    )
+            )
+        )
+
+    )
+    .Buttons(
+            X.Button()
+                .Text("Guardar")
+                .UI(UI.Success)
+                .OnClientClick(@"var form = this.up('form'),
+                                     r = form.getForm().getRecord();
+
+                                 if (r) {
+                                     form.getForm().updateRecord(form.down('grid').getSelectionModel().getLastSelected());
+                                 }"),
+
+            X.Button()
+                .Text("Cancelar")
+                .UI(UI.Danger)
+                .OnClientClick("this.up('form').getForm().reset();"),
+            X.Button()
+                .Text("Get Values...")
+                .Menu(X.Menu()
+                    .Items(
+                        X.MenuItem()
+                            .Text("Object")
+                            .OnClientClick("alert(Ext.encode(this.up('form').getForm().getValues()));"),
+                        X.MenuItem()
+                            .Text("String")
+                            .OnClientClick("alert(this.up('form').getForm().getValues(true));")
+                    )
+                )
+        )
+
+
+    )
+
+
+</body>
+</html>

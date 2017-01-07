@@ -5,7 +5,7 @@
 
 @{
     ViewBag.Title = "Agenda - .:Clínica Odontólogica:.";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
     var X = Html.X();
 }
 
@@ -13,7 +13,7 @@
 <html>
 <head>
     <title>Agenda de citas</title>
-    <link rel="stylesheet" href="@Url.Content("~/css/calendar.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/calendar.css")" />
     <script src="@Url.Content("~/Scripts/common.js")"></script>
 
     <style>
@@ -45,7 +45,7 @@
     @(Html.X().Viewport()
         .Layout("border")
         .Items(
-            Html.X().Panel()
+            /*Html.X().Panel()
                 .Height(50)
                 .Border(false)
                 .Region(Region.North)
@@ -60,7 +60,7 @@
                     </div>
                     <h1>My Calendar</h1>
                     <span id="app-msg" class="x-hidden"></span>
-                </text>),
+                </text>),*/
             Html.X().Panel()
                 .ID("Panel1")
                 .Title("Agenda de citas")

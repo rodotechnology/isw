@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ingreso al sistema odontológico</title>
+    <title>Principal - .:Clínica Odontólogica:.</title>
     <script>
         var loadPage = function (tabPanel, record) {
             var tab = tabPanel.getComponent("node" + record.data.hash);
@@ -25,7 +25,7 @@
                         renderer: "frame",
                         loadMask: {
                             showMask: true,
-                            msg: "Loading " + record.data.url + "..."
+                            msg: "Cargando " + record.data.url + "..."
                         }
                     },
                     autoScroll: true
@@ -37,57 +37,112 @@
     </script>
 </head>
 <body>
-    @(Html.X().ResourceManager())
+    @(X.ResourceManager())
 
     @(X.Viewport()
-        .Layout(LayoutType.Border)
-        .Items(
-            X.Panel()
-                .Region(Region.North)
-                .Split(false)
-                .Height(60)
-                .BodyPadding(6)
-                .Html("Banner del sistema")
-                .Collapsible(false),
+            .Layout(LayoutType.Border)
+            .Items(
+                X.Panel()
+                    .Region(Region.North)
+                    .Split(false)
+                    .Height(45)
+                    .BodyPadding(6)
+                    .Html("Banner del sistema")
+                    .Collapsible(false)
+                    .BodyStyle("background-image: url(../Img/banner-superior.jpg)"),
 
-            X.Panel()
+                X.TreePanel()
+                .Width(250)
+                .Icon(Icon.BookOpen)
                 .Title("Opciones")
                 .Region(Region.West)
-                .Layout(LayoutType.Accordion)
-                .Width(250)
-                .MinWidth(250)
-                .MaxWidth(400)
                 .Split(true)
                 .Collapsible(true)
-                .Items(
-                    X.Panel()
-                        .Title("Citas")
-                        .Border(false)
-                        .BodyPadding(6)
-                        .Icon(Icon.FolderGo)
-                        .Html("Opciones de citas"),
+                .AutoScroll(true)
+                /*.TopBar(
+                    X.Toolbar()
+                        .Items(
+                            X.Button()
+                                .Text("Expand All")
+                                .Handler("this.up('treepanel').expandAll();"),
 
-                    X.Panel()
-                        .Title("Consultas")
-                        .Border(false)
-                        .BodyPadding(6)
-                        .Icon(Icon.FolderWrench)
-                        .Html("Opciones de consulta"),
+                            X.Button()
+                                .Text("Collapse All")
+                                .Handler("this.up('treepanel').collapseAll();")
+                        )
+                )*/
+                .Root(
+                    X.Node()
+                     .Text("Raiz")
+                     .Expanded(true)
+                     .Children(
+                        X.Node()
+                            .Text("Gestión de citas")
+                            .Icon(Icon.BookOpenMark)
+                            .Children(
+                                X.Node()
+                                    .Text("Agenda")
+                                    .Leaf(true)
+                                    .CustomAttributes(new ConfigItem("url", "Agenda")),
+                                X.Node()
+                                    .Text("Asignación de cubículos")
+                                    .Leaf(true)
+                                    .CustomAttributes(new ConfigItem("url", "Cita"))
+                            ),
 
-                    X.Panel()
-                        .Title("Pagos")
-                        .Border(false)
-                        .BodyPadding(6)
-                        .Icon(Icon.MoneyDollar)
-                        .Html("Opciones de pago"),
+                     X.Node()
+                        .Text("Gestión de consultas")
+                        .Icon(Icon.TableGear)
+                        .Children(
+                            X.Node()
+                                .Text("Consultas")
+                                .Leaf(true)
+                                .CustomAttributes(new ConfigItem("url", "Consulta"))
+                                ),
 
-                                        X.Panel()
-                        .Title("Salir")
-                        .Border(false)
-                        .BodyPadding(6)
-                        .Icon(Icon.DoorOut)
-                        .Html("<a href='Index'>Cerrar sesión</a>")
-                ),
+                      X.Node()
+                        .Text("Gestión de pacientes")
+                        .Icon(Icon.UserGray)
+                        .Children(
+                            X.Node()
+                                .Text("Expediente")
+                                .Leaf(true)
+                                .CustomAttributes(new ConfigItem("url", "Expediente"))
+                                ),
+
+                      X.Node()
+                        .Text("Gestión de pagos")
+                        .Icon(Icon.Money)
+                        .Children(
+                            X.Node()
+                                .Text("Pagos")
+                                .Leaf(true)
+                                .CustomAttributes(new ConfigItem("url", "Pago"))
+                                )
+                 )
+            )
+            .RootVisible(false)
+            .Buttons(
+                X.Button()
+                  .Text("Cerrar Sesión")
+                  .Href("Index")
+                  .HrefTarget("_self")
+                  .Icon(Icon.DoorOut)
+            )
+            .BottomBar(
+                X.StatusBar().AutoClear(1500)
+            )
+            .Listeners(l =>
+            {
+                //l.ItemClick.Handler = "this.down('statusbar').setStatus({text: 'Node Selected: <b>' + record.data.text + '<br />', clear: false});";
+                l.ItemClick.Handler = "if (record.data.url) { loadPage(this.next('tabpanel'), record); return false; }";
+
+                l.ItemExpand.Handler = "this.down('statusbar').setStatus({text: 'Opción: <b>' + item.data.text + '<br />', clear: false});";
+                l.ItemExpand.Buffer = 50;
+
+                l.ItemCollapse.Handler = "this.down('statusbar').setStatus({text: 'Opción: <b>' + item.data.text + '<br />', clear: false});";
+                l.ItemCollapse.Buffer = 50;
+            }),
 
             X.TabPanel()
                 .Region(Region.Center)
@@ -96,14 +151,7 @@
                         .Title("Inicio")
                         .Border(false)
                         .BodyPadding(6)
-                        .Html("<h1>Area principal del aplicativo</h1>"),
-
-                    X.Panel()
-                        .Title("Close Me")
-                        .Closable(true)
-                        .Border(false)
-                        .BodyPadding(6)
-                        .Html("Closeable Tab")
+                        .Html("<h1>Area principal del aplicativo</h1>")
                 )
         )
     )

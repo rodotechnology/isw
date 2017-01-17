@@ -165,37 +165,28 @@
         .Title("Nueva Cita")
         .Icon(Icon.Add)
         .Width(600)
-        .Height(500)
+        .Height(430)
         .Collapsible(true)
         .Maximizable(false)
         .BodyStyle("background-color: #fff;")
         .BodyPadding(5)
         .Hidden(true)
         .Modal(true)
-        .Items(X.FormPanel()
+        .Items(
+    X.FormPanel()
         .DefaultAnchor("100%")
                 .BodyPadding(5)
                 .Items(
+
             X.FieldContainer()
             .Layout(LayoutType.HBox)
             .Items(
                 X.DateField()
                     .Name("finicio")
-                    .FieldLabel("Inicio"),
+                    .FieldLabel("Fecha Inicio"),
                 X.TimeField()
                     .Name("Hinicio")
-                    .FieldLabel("HInicio")
-                    .TriggerIcon(TriggerIcon.SimpleTime)
-                ),
-                X.FieldContainer()
-            .Layout(LayoutType.HBox)
-            .Items(
-                X.DateField()
-                    .Name("ffin")
-                    .FieldLabel("Fin"),
-                X.TimeField()
-                    .Name("HFin")
-                    .FieldLabel("HFin")
+                    .FieldLabel("Hora inicio")
                     .TriggerIcon(TriggerIcon.SimpleTime)
                 ),
                    X.ComboBox()
@@ -207,15 +198,15 @@
         .Flex(1)
         .EmptyText("Seleccione un servicio")
         .Items(
-            new ListItem("Belgium", "BE"),
-            new ListItem("Brazil", "BR"),
-            new ListItem("Bulgaria", "BG"),
-            new ListItem("Canada", "CA"),
-            new ListItem("Chile", "CL"),
-            new ListItem("Cyprus", "CY"),
-            new ListItem("Finland", "FI"),
-            new ListItem("France", "FR")
-        ), X.ComboBox()
+            new ListItem("Diagnóstico Bucal", "BE"),
+            new ListItem("Cirugía", "BR"),
+            new ListItem("Endodoncia", "BG"),
+            new ListItem("Periodoncia", "CA"),
+            new ListItem("Operatoria", "CL"),
+            new ListItem("Prótesis", "CY"),
+            new ListItem("Pediatría", "FI")
+        ),
+                   X.ComboBox()
         .ID("cbxMedico")
         .FieldLabel("Medico")
         .Editable(false)
@@ -224,14 +215,13 @@
         .Flex(1)
         .EmptyText("Seleccione un medico")
         .Items(
-            new ListItem("Belgium", "BE"),
-            new ListItem("Brazil", "BR"),
-            new ListItem("Bulgaria", "BG"),
-            new ListItem("Canada", "CA"),
-            new ListItem("Chile", "CL"),
-            new ListItem("Cyprus", "CY"),
-            new ListItem("Finland", "FI"),
-            new ListItem("France", "FR")
+            new ListItem("AHUAT MEDARDO ANTONIO DR", "BE"),
+            new ListItem("ARÉVALO AYALA MAURICIO ERNESTO DR", "BR"),
+            new ListItem("ARIAS TEJADA DE CLAUDIA DRA", "BG"),
+            new ListItem("BAUTISTA GRANADOS JENNY ELIZABETH DE DRA", "CA"),
+            new ListItem("CAÑADA MANUEL DR", "CL"),
+            new ListItem("DRA KELLY AGUIÑADA ", "CY"),
+            new ListItem("DRA MARÍA DE LOS ANGELES ROSALES DE SAMPERA", "FI")
         ),
                    X.TextField()
                         .FieldLabel("Nombre"),
@@ -239,17 +229,30 @@
                         .FieldLabel("Apellidos"),
 
                 X.FieldContainer()
-            .Layout(LayoutType.VBox)
+            .Layout(LayoutType.HBox)
             .Items(
                         X.TextField()
+                        .EmptyText("xxx-xxx-xxxx")
+                        .MaskRe("[\\d\\-]")
+                        .Regex("^\\d{3}-\\d{3}-\\d{4}$")
+                        .RegexText("Must be in the format xxx-xxx-xxxx")
                         .FieldLabel("Telefono"),
                     X.TextField()
-                        .FieldLabel("Celular"),
-                    X.TextField()
+                    .EmptyText("xxx-xxx-xxxx")
+                        .MaskRe("[\\d\\-]")
+                        .Regex("^\\d{3}-\\d{3}-\\d{4}$")
+                        .RegexText("Must be in the format xxx-xxx-xxxx")
+                        .FieldLabel("Celular")
+                ),
+                X.FieldContainer()
+            .Layout(LayoutType.VBox)
+            .Items(
+                X.TextField()
+                    .Vtype("email")
                         .FieldLabel("Correo electrónico")
                 )
-
             )
+
 
                 .Buttons(
                     X.Button()
@@ -267,57 +270,48 @@
         .Title("Editar Cita")
         .Icon(Icon.PageEdit)
         .Width(600)
-        .Height(500)
+        .Height(430)
         .Collapsible(true)
         .Maximizable(false)
         .BodyStyle("background-color: #fff;")
         .BodyPadding(5)
         .Hidden(true)
         .Modal(true)
-        .Items(X.FormPanel()
+        .Items(
+    X.FormPanel()
         .DefaultAnchor("100%")
                 .BodyPadding(5)
                 .Items(
+
             X.FieldContainer()
             .Layout(LayoutType.HBox)
             .Items(
                 X.DateField()
                     .Name("finicioE")
-                    .FieldLabel("Inicio"),
-               X.TimeField()
-                    .Name("HinicioE")
-                    .FieldLabel("HInicio")
-                    .TriggerIcon(TriggerIcon.SimpleTime)
-                ),
-                X.FieldContainer()
-            .Layout(LayoutType.HBox)
-            .Items(
-                X.DateField()
-                    .Name("ffinE")
-                    .FieldLabel("Fin"),
+                    .FieldLabel("Fecha Inicio"),
                 X.TimeField()
-                    .Name("HFinE")
-                    .FieldLabel("HFin")
+                    .Name("HinicioE")
+                    .FieldLabel("Hora inicio")
                     .TriggerIcon(TriggerIcon.SimpleTime)
                 ),
                    X.ComboBox()
         .ID("cbxServicioE")
-        .FieldLabel("Servicio")
+       .FieldLabel("Servicio")
         .Editable(false)
         .QueryMode(DataLoadMode.Local)
         .TriggerAction(TriggerAction.All)
         .Flex(1)
         .EmptyText("Seleccione un servicio")
         .Items(
-            new ListItem("Belgium", "BE"),
-            new ListItem("Brazil", "BR"),
-            new ListItem("Bulgaria", "BG"),
-            new ListItem("Canada", "CA"),
-            new ListItem("Chile", "CL"),
-            new ListItem("Cyprus", "CY"),
-            new ListItem("Finland", "FI"),
-            new ListItem("France", "FR")
-        ), X.ComboBox()
+            new ListItem("Diagnóstico Bucal", "BE"),
+            new ListItem("Cirugía", "BR"),
+            new ListItem("Endodoncia", "BG"),
+            new ListItem("Periodoncia", "CA"),
+            new ListItem("Operatoria", "CL"),
+            new ListItem("Prótesis", "CY"),
+            new ListItem("Pediatría", "FI")
+        ),
+                   X.ComboBox()
         .ID("cbxMedicoE")
         .FieldLabel("Medico")
         .Editable(false)
@@ -326,14 +320,13 @@
         .Flex(1)
         .EmptyText("Seleccione un medico")
         .Items(
-            new ListItem("Belgium", "BE"),
-            new ListItem("Brazil", "BR"),
-            new ListItem("Bulgaria", "BG"),
-            new ListItem("Canada", "CA"),
-            new ListItem("Chile", "CL"),
-            new ListItem("Cyprus", "CY"),
-            new ListItem("Finland", "FI"),
-            new ListItem("France", "FR")
+            new ListItem("AHUAT MEDARDO ANTONIO DR", "BE"),
+            new ListItem("ARÉVALO AYALA MAURICIO ERNESTO DR", "BR"),
+            new ListItem("ARIAS TEJADA DE CLAUDIA DRA", "BG"),
+            new ListItem("BAUTISTA GRANADOS JENNY ELIZABETH DE DRA", "CA"),
+            new ListItem("CAÑADA MANUEL DR", "CL"),
+            new ListItem("DRA KELLY AGUIÑADA ", "CY"),
+            new ListItem("DRA MARÍA DE LOS ANGELES ROSALES DE SAMPERA", "FI")
         ),
                    X.TextField()
                         .FieldLabel("Nombre"),
@@ -341,21 +334,34 @@
                         .FieldLabel("Apellidos"),
 
                 X.FieldContainer()
-            .Layout(LayoutType.VBox)
+            .Layout(LayoutType.HBox)
             .Items(
                         X.TextField()
+                        .EmptyText("xxx-xxx-xxxx")
+                        .MaskRe("[\\d\\-]")
+                        .Regex("^\\d{3}-\\d{3}-\\d{4}$")
+                        .RegexText("Must be in the format xxx-xxx-xxxx")
                         .FieldLabel("Telefono"),
                     X.TextField()
-                        .FieldLabel("Celular"),
-                    X.TextField()
+                    .EmptyText("xxx-xxx-xxxx")
+                        .MaskRe("[\\d\\-]")
+                        .Regex("^\\d{3}-\\d{3}-\\d{4}$")
+                        .RegexText("Must be in the format xxx-xxx-xxxx")
+                        .FieldLabel("Celular")
+                ),
+                X.FieldContainer()
+            .Layout(LayoutType.VBox)
+            .Items(
+                X.TextField()
+                    .Vtype("email")
                         .FieldLabel("Correo electrónico")
                 )
-
             )
+
 
                 .Buttons(
                     X.Button()
-                    .Icon(Icon.DiskEdit)
+                    .Icon(Icon.Disk)
                     .Text("Generar"),
                     X.Button()
                     .Icon(Icon.Cancel)

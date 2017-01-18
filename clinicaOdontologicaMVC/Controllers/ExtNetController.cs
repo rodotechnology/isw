@@ -4,6 +4,8 @@ using System.Web.Mvc;
 using Ext.Net;
 using Ext.Net.MVC;
 using clinicaOdontologicaMVC.Models;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace clinicaOdontologicaMVC.Controllers
 {
@@ -54,7 +56,25 @@ namespace clinicaOdontologicaMVC.Controllers
 
         public ActionResult Main()
         {
-            return View();
+            XElement document = XElement.Load(Server.MapPath("~/xml/DashboardSchema.xml"));
+            string defaultIcon = document.Attribute("defaultIcon") != null ? document.Attribute("defaultIcon").Value : "";
+
+            IEnumerable<object> query = from g in document.Elements("group")
+                                        select new
+                                        {
+                                            Title = g.Attribute("title") != null ? g.Attribute("title").Value : "",
+                                            Items = (from i in g.Elements("item")
+                                                     select new
+                                                     {
+                                                         Title = i.Element("title") != null ? i.Element("title").Value : "",
+                                                         Icon = Url.Content("~/xml/" + (i.Element("item-icon") != null ? i.Element("item-icon").Value : defaultIcon)),
+                                                         Id = i.Element("id") != null ? i.Element("id").Value : ""
+                                                     }
+                                                )
+                                        };
+            return View(query);
+
+            //return View();
         }
 
         public ActionResult LoadPages(string node)
@@ -133,12 +153,12 @@ namespace clinicaOdontologicaMVC.Controllers
         {
             return new object[]
             {
-                new object[] { "3m Co", 71.72, 0.02, 0.03, "9/1 12:00am" },
-                new object[] { "Alcoa Inc", 29.01, 0.42, 1.47, "9/1 12:00am" },
-                new object[] { "Altria Group Inc", 83.81, 0.28, 0.34, "9/1 12:00am" },
-                new object[] { "American Express Company", 52.55, 0.01, 0.02, "9/1 12:00am" },
-                new object[] { "American International Group, Inc.", 64.13, 0.31, 0.49, "9/1 12:00am" },
-                new object[] { "AT&T Inc.", 31.61, -0.48, -1.54, "9/1 12:00am" },
+                new object[] { "Juan Pérez", 71.72, "Endodoncia", 0.03, "9/1 12:00am" },
+                new object[] { "José López", 29.01, "Odontologia estetica", 1.47, "9/1 12:00am" },
+                new object[] { "Carmen Ramírez", 83.81, "Periodoncia", 0.34, "9/1 12:00am" },
+                new object[] { "Sophia Hernández", 52.55, "Ortodoncia", 0.02, "9/1 12:00am" },
+                new object[] { "Leopoldo Campos", 64.13, "Odontopediatría", 0.49, "9/1 12:00am" }
+                /*new object[] { "AT&T Inc.", 31.61, -0.48, -1.54, "9/1 12:00am" },
                 new object[] { "Boeing Co.", 75.43, 0.53, 0.71, "9/1 12:00am" },
                 new object[] { "Caterpillar Inc.", 67.27, 0.92, 1.39, "9/1 12:00am" },
                 new object[] { "Citigroup, Inc.", 49.37, 0.02, 0.04, "9/1 12:00am" },
@@ -161,9 +181,13 @@ namespace clinicaOdontologicaMVC.Controllers
                 new object[] { "The Procter & Gamble Company", 61.91, 0.01, 0.02, "9/1 12:00am" },
                 new object[] { "United Technologies Corporation", 63.26, 0.55, 0.88, "9/1 12:00am" },
                 new object[] { "Verizon Communications", 35.57, 0.39, 1.11, "9/1 12:00am" },
-                new object[] { "Wal-Mart Stores, Inc.", 45.45, 0.73, 1.63, "9/1 12:00am" }
+                new object[] { "Wal-Mart Stores, Inc.", 45.45, 0.73, 1.63, "9/1 12:00am" }*/
             };
         }
 
+        public ActionResult Alertas()
+        {
+            return View();
+        }
     }
 }

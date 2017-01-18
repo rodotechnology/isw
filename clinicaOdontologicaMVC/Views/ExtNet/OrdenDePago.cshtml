@@ -48,28 +48,28 @@
                     .Model(X.Model()
                         .Fields(f =>
                         {
-                            f.Add(X.ModelField().Name("company"));
-                            f.Add(X.ModelField().Name("price").Type(ModelFieldType.Float));
-                            f.Add(X.ModelField().Name("change").Type(ModelFieldType.Float));
-                            f.Add(X.ModelField().Name("pctChange").Type(ModelFieldType.Float));
+                            f.Add(X.ModelField().Name("paciente"));
+                            f.Add(X.ModelField().Name("monto").Type(ModelFieldType.Float));
+                            f.Add(X.ModelField().Name("tratamiento"));
+                            /*f.Add(X.ModelField().Name("pctChange").Type(ModelFieldType.Float));
                             f.Add(X.ModelField().Name("lastChange").Type(ModelFieldType.Date).DateFormat("M/d hh:mmtt"));
-                            f.Add(X.ModelField().Name("rating").Type(ModelFieldType.Int).Convert(j => j.Handler = "var pct = record.get('pctChange'); if (pct < 0) return 2; if (pct < 1) return 1; return 0;"));
+                            f.Add(X.ModelField().Name("rating").Type(ModelFieldType.Int).Convert(j => j.Handler = "var pct = record.get('pctChange'); if (pct < 0) return 2; if (pct < 1) return 1; return 0;"));*/
                         })
                     )
                 )
                 .ColumnModel(
-                    X.Column().Text("Nombre").DataIndex("company").Flex(1),
-                    X.Column().Text("Price").Width(75).DataIndex("price").Renderer(RendererFormat.UsMoney),
-                    X.Column().Text("Change").Width(75).DataIndex("change").Renderer("change"),
-                    X.Column().Text("Change").Width(75).DataIndex("pctChange").Renderer("pctChange"),
+                    X.Column().Text("Nombre").DataIndex("paciente").Flex(1),
+                    X.Column().Text("Monto").Width(75).DataIndex("monto").Renderer(RendererFormat.UsMoney),
+                    X.Column().Text("Tratamiento").Width(150).DataIndex("tratamiento")
+                    /*X.Column().Text("Change").Width(75).DataIndex("pctChange").Renderer("pctChange"),
                     X.DateColumn().Text("Last Updated").Width(95).DataIndex("lastChange"),
-                    X.Column().Text("Rating").Width(50).Sortable(true).DataIndex("rating").Renderer("if (value == 0) return 'A'; if (value == 1) return 'B'; if (value == 2) return 'C';")
+                    X.Column().Text("Rating").Width(50).Sortable(true).DataIndex("rating").Renderer("if (value == 0) return 'A'; if (value == 1) return 'B'; if (value == 2) return 'C';")*/
                 )
                 .Listeners(l => l.SelectionChange.Handler = "if (selected[0]) { this.up('form').getForm().loadRecord(selected[0]); }"),
 
         X.FieldSet()
             .ColumnWidth(0.4)
-            .Title("Company details")
+            .Title("Detalle de pago")
             .MarginSpec("0 0 0 10")
             .Defaults(d =>
             {
@@ -77,42 +77,43 @@
             })
             .Items(
                 X.TextField()
-                    .Name("company")
-                    .FieldLabel("Name"),
+                    .Name("paciente")
+                    .FieldLabel("Nombre"),
                 X.TextField()
-                    .Name("price")
-                    .FieldLabel("Price"),
+                    .Name("monto")
+                    .FieldLabel("Monto"),
                 X.TextField()
-                    .Name("pctChange")
-                    .FieldLabel("Change (%)"),
-                X.DateField()
+                    .Name("tratamiento")
+                    .FieldLabel("Tratamiento"),
+                /*X.DateField()
                     .Name("lastChange")
-                    .FieldLabel("Last Updated"),
+                    .FieldLabel("Last Updated"),*/
                 X.RadioGroup()
-                    .FieldLabel("Rating (read-only)")
+                    .FieldLabel("Forma de pago")
                     .ColumnsNumber(3)
                     .AutomaticGrouping(false)
                     .Items(
-                        X.Radio().Name("rating").InputValue("0").BoxLabel("A").ReadOnly(true),
-                        X.Radio().Name("rating").InputValue("1").BoxLabel("B").ReadOnly(true),
-                        X.Radio().Name("rating").InputValue("2").BoxLabel("C").ReadOnly(true)
+                        X.Radio().Name("rating").InputValue("0").BoxLabel("Efectivo"),
+                        X.Radio().Name("rating").InputValue("1").BoxLabel("Tarjeta crédito/débito")
+                        /*X.Radio().Name("rating").InputValue("2").BoxLabel("C").ReadOnly(true)*/
                     )
             )
         )
         .Buttons(
             X.Button()
-                .Text("Save To Grid")
-                .OnClientClick(@"var form = this.up('form'),
+                .Text("Generar pago")
+                .OnClientClick("alert('Pago generado satisfactoriamente');"),
+                /*.OnClientClick(@"var form = this.up('form'),
                                      r = form.getForm().getRecord();
 
                                  if (r) {
                                      form.getForm().updateRecord(form.down('grid').getSelectionModel().getLastSelected());
-                                 }"),
+                                 }"),*/
 
             X.Button()
-                .Text("Reset Fields")
-                .OnClientClick("this.up('form').getForm().reset();"),
-            X.Button()
+                .Text("Limpiar formulario")
+                .OnClientClick("this.up('form').getForm().reset();")
+            /*X.Button()
                 .Text("Get Values...")
                 .Menu(X.Menu()
                     .Items(
@@ -123,7 +124,7 @@
                             .Text("String")
                             .OnClientClick("alert(this.up('form').getForm().getValues(true));")
                     )
-                )
+                )*/
         )
     )
 </body>

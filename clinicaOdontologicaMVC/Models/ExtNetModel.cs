@@ -24,30 +24,30 @@ namespace clinicaOdontologicaMVC.Models
                     {
                         EventId = 1001,
                         CalendarId = 1,
-                        Title = "Vacation",
+                        Title = "Endodoncia",
                         StartDate = now.AddDays(-20).AddHours(10),
                         EndDate = now.AddDays(-10).AddHours(15),
                         IsAllDay = false,
-                        Notes = "Have fun"
+                        Notes = "Endodoncia"
                     },
                     new EventModel
                     {
                         EventId = 1002,
                         CalendarId = 2,
-                        Title = "Lunch with Matt",
+                        Title = "Odontologia estetica",
                         StartDate = now.AddHours(11).AddMinutes(30),
                         EndDate = now.AddHours(13),
                         IsAllDay = false,
-                        Location = "Chuy's!",
+                        Location = "Clinica",
                         Url = "http://chuys.com",
-                        Notes = "Order the queso",
+                        Notes = "Odontologia estetica",
                         Reminder = "15"
                     },
                     new EventModel
                     {
                         EventId = 1003,
                         CalendarId = 3,
-                        Title = "Project due",
+                        Title = "Periodoncia",
                         StartDate = now.AddHours(15),
                         EndDate = now.AddHours(15),
                         IsAllDay = false
@@ -56,17 +56,17 @@ namespace clinicaOdontologicaMVC.Models
                     {
                         EventId = 1004,
                         CalendarId = 1,
-                        Title = "Sarah's birthday",
+                        Title = "Ortodoncia",
                         StartDate = now,
                         EndDate = now,
                         IsAllDay = true,
-                        Notes = "Need to get a gift"
+                        Notes = "Ortodoncia"
                     },
                     new EventModel
                     {
                         EventId = 1005,
                         CalendarId = 2,
-                        Title = "A long one...",
+                        Title = "Cirugía Maxilofacial",
                         StartDate = now.AddDays(-12),
                         EndDate = now.AddDays(10).AddSeconds(-1),
                         IsAllDay = true
@@ -75,7 +75,7 @@ namespace clinicaOdontologicaMVC.Models
                     {
                         EventId = 1006,
                         CalendarId = 3,
-                        Title = "School holiday",
+                        Title = "Odontopediatría",
                         StartDate = now.AddDays(5),
                         EndDate = now.AddDays(7).AddSeconds(-1),
                         IsAllDay = true,
@@ -85,38 +85,38 @@ namespace clinicaOdontologicaMVC.Models
                     {
                         EventId = 1007,
                         CalendarId = 1,
-                        Title = "Haircut",
+                        Title = "Prótesis dentales",
                         StartDate = now.AddHours(9),
                         EndDate = now.AddHours(9).AddMinutes(30),
                         IsAllDay = false,
-                        Notes = "Get cash on the way"
+                        Notes = "Prótesis dentales"
                     },
                     new EventModel
                     {
                         EventId = 1008,
                         CalendarId = 3,
-                        Title = "An old event",
+                        Title = "Implantes dentales",
                         StartDate = now.AddDays(-30),
                         EndDate = now.AddDays(-28),
                         IsAllDay = true,
-                        Notes = "Get cash on the way"
+                        Notes = "Implantes dentales"
                     },
                     new EventModel
                     {
                         EventId = 1009,
                         CalendarId = 2,
-                        Title = "Board meeting",
+                        Title = "Odontopediatría",
                         StartDate = now.AddDays(-2).AddHours(13),
                         EndDate = now.AddDays(-2).AddHours(18),
                         IsAllDay = false,
-                        Location = "ABC Inc.",
+                        Location = "Clinica",
                         Reminder = "60"
                     },
                     new EventModel
                     {
                         EventId = 1010,
                         CalendarId = 3,
-                        Title = "Jenny's final exams",
+                        Title = "Cirugía Maxilofacial",
                         StartDate = now.AddDays(-2),
                         EndDate = now.AddDays(3).AddSeconds(-1),
                         IsAllDay = true
@@ -125,11 +125,11 @@ namespace clinicaOdontologicaMVC.Models
                     {
                         EventId = 1011,
                         CalendarId = 1,
-                        Title = "Movie night",
+                        Title = "Ortodoncia",
                         StartDate = now.AddDays(2).AddHours(19),
                         EndDate = now.AddDays(2).AddHours(23),
                         IsAllDay = false,
-                        Notes = "Don't forget the tickets!",
+                        Notes = "Ortodoncia",
                         Reminder = "60"
                     }
                 };
@@ -209,11 +209,11 @@ namespace clinicaOdontologicaMVC.Models
             {
                 return new List<object>
                 {
-                    new { InsuranceCode="11111", Name="Juan Pérez", Address="Main Street", Telephone="555 1234 123" },
-                    new { InsuranceCode="22222", Name="José López", Address="Cromwell Street", Telephone="923 672 485" },
-                    new { InsuranceCode="33333", Name="Carmen Ramírez", Address="Over The Rainbow", Telephone="555 321 0987" },
-                    new { InsuranceCode="44444", Name="Sophia Hernández", Address="Blimp Street", Telephone="555 111 2222" },
-                    new { InsuranceCode="55555", Name="Leopoldo Campos", Address="Talbot County, Maryland", Telephone="N/A" }
+                    new { InsuranceCode="11111", Name="Juan Pérez", Address="Main Street", Telephone="2222-3333", Mail="jperez@gmail.com" },
+                    new { InsuranceCode="22222", Name="José López", Address="Cromwell Street", Telephone="2222-4444", Mail="jlopez@yahoo.com" },
+                    new { InsuranceCode="33333", Name="Carmen Ramírez", Address="Over The Rainbow", Telephone="2222-5555", Mail="cramirez@hotmail.com" },
+                    new { InsuranceCode="44444", Name="Sophia Hernández", Address="Blimp Street", Telephone="2222-6666", Mail="shernandez@gmail.com" },
+                    new { InsuranceCode="55555", Name="Leopoldo Campos", Address="Talbot County, Maryland", Telephone="2222-7777", Mail="lcampos@yahoo.com" }
                 };
             }
         }

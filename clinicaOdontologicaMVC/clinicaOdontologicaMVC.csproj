@@ -260,6 +260,11 @@
     <Content Include="App_Readme\Ext.NET\README.md" />
     <Content Include="App_Readme\Ext.NET\LICENSE" />
     <Content Include="App_Readme\Ext.NET\CHANGELOG.md" />
+    <Content Include="xml\DashboardSchema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\group-expand-sprite.gif" />
+    <Content Include="xml\icon.png" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\common.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
